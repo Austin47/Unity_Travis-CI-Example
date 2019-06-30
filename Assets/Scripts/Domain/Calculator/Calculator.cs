@@ -11,9 +11,22 @@ namespace Domain.CalculatorService
             Instance = this;
         }
 
-        public float Calculate(float v1, float v2, Operation o)
+        public string GetSymbol(Operation op)
         {
-            switch (o)
+            switch (op)
+            {
+                case Operation.Add: return "+";
+                case Operation.Subtract: return "-";
+                case Operation.Multiply: return "x";
+                case Operation.Divide: return "/";
+            }
+
+            return "";
+        }
+
+        public float Calculate(float v1, float v2, Operation op)
+        {
+            switch (op)
             {
                 case Operation.Add: return Add(v1, v2);
                 case Operation.Subtract: return Subtract(v1, v2);

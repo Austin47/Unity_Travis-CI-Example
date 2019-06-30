@@ -5,7 +5,7 @@ namespace Domain.CalculatorService.Test
     public class CalculatorTest
     {
         [OneTimeSetUp]
-        public void SetUp()
+        public void OneTimeSetUp()
         {
             new Calculator();
         }
@@ -67,6 +67,19 @@ namespace Domain.CalculatorService.Test
         {
             // Act
             var actual = Calculator.Instance.Calculate(v1, v2, Operation.Divide);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(Operation.Add, "+")]
+        [TestCase(Operation.Subtract, "-")]
+        [TestCase(Operation.Multiply, "x")]
+        [TestCase(Operation.Divide, "/")]
+        public void TestGetSymbol(Operation op, string expected)
+        {
+            // Act
+            var actual = Calculator.Instance.GetSymbol(op);
 
             // Assert
             Assert.AreEqual(expected, actual);

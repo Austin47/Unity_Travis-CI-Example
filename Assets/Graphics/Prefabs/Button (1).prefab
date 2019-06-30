@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 6829135483547766798}
   - component: {fileID: 6829135483547766797}
   - component: {fileID: 6829135483547766796}
+  - component: {fileID: 8717005154167123920}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -197,6 +198,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6829135483547766797}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8717005154167123920}
+        m_MethodName: Calculate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8717005154167123920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829135483547766786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800b29b8663c44e748aa52c7c32600cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  operation: 0
+  value: 1
+  text: {fileID: 6829135483050235507}
